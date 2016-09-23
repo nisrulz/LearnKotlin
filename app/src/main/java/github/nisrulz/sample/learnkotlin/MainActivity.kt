@@ -1,11 +1,11 @@
 package github.nisrulz.sample.learnkotlin
 
-import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-
 // Get the references for all the views in the layout with a defined ID, via below import.
 // This is IMPORTANT to get reference of all views under the exact layout
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,5 +25,18 @@ class MainActivity : AppCompatActivity() {
               The references won’t be assigned before the onCreateView() method has finished.
      */
     txt_helloworld.text = "Hello Kotlin World!"
+
+
+    // Using the kotlin pojo class
+    // More info about properties at https://kotlinlang.org/docs/reference/properties.html
+    val userName = User()
+    userName.firstName = "Nishant"
+    userName.lastName = "Srivastava"
+
+    // Set the value in textview using the custom getter
+    txt_helloworld.text = "Hello Kotlin World! - "+userName.fullName
+
+
+
   }
 }
