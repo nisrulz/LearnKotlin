@@ -7,4 +7,5 @@ package github.nisrulz.sample.learnkotlin
   constructor with non-default visibility:
  */
 class UtilityClass private constructor() {
+
 }

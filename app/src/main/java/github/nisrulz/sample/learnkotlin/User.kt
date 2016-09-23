@@ -46,4 +46,9 @@ open class User(var fName: String, var lName: String) {
 
   // Custom getter
   val fullName: String? get() = firstName + " " + lastName
+
+  // Defining a member function in kotlin
+  fun sayHello(name: String): String {
+    return "Hello " + name
+  }
 }
