@@ -16,6 +16,13 @@ class MainActivity : AppCompatActivity() {
 
     var stringToDisplay = "Hello Kotlin World!"
 
+    //The null check can be simplified using safe call operator (?.)
+    val number: Int? = null
+    // This will be executed only if the number is not null
+    number?.toString()
+    // Explicitly throw a NullPointerException
+    number!!.toString()
+
     /* Static Layout Import
      Kotlin allows you to import all references to views from the layout with one import.
 
@@ -86,7 +93,8 @@ class MainActivity : AppCompatActivity() {
     Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
   }
 
-  // Defining an kotlin extension
+  // Defining a kotlin extension
+  // Extension functions don’t modify the original extended class, but are a convenient way of writing utility methods.
   fun User.getUserAge(age:Int): String {
     return "Age : "+ age
   }
