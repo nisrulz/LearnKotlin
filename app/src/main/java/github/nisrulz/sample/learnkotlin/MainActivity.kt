@@ -40,8 +40,8 @@ class MainActivity : AppCompatActivity() {
     stringToDisplay = stringToDisplay + "\n\nUsing primary constructor\n" + "Hello " + userName.fullName
 
     // Initialize using default setter
-     userName.firstName = "Harsh"
-     userName.lastName = "Singh"
+    userName.firstName = "Harsh"
+    userName.lastName = "Singh"
 
     stringToDisplay = stringToDisplay + "\n\nUsing default setter\n" + "Hello " + userName.fullName
 
@@ -50,9 +50,13 @@ class MainActivity : AppCompatActivity() {
     stringToDisplay = stringToDisplay + "\n\nUsing inheritance\n" + "Hello " + operator.fullName
 
     // Using member function
-    stringToDisplay = stringToDisplay + "\n\nUsing member function of User object\n"  + userName.sayHello("Nishant")
+    stringToDisplay = stringToDisplay + "\n\nUsing member function of User object\n" + userName.sayHello(
+        "Nishant")
 
-    stringToDisplay = stringToDisplay + "\n\nUsing local member function\n"  + add(5,10)
+    stringToDisplay = stringToDisplay + "\n\nUsing local member function\n" + add(5, 10)
+
+    // Using a defined kotlin extension
+    stringToDisplay = stringToDisplay + "\n\nUsing kotlin extensions\n" + userName.getUserAge(22)
 
 
     // Set the value in textview
@@ -79,7 +83,12 @@ class MainActivity : AppCompatActivity() {
   }
 
   private fun toast(s: String) {
-    Toast.makeText(this,s,Toast.LENGTH_SHORT).show()
+    Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
+  }
+
+  // Defining an kotlin extension
+  fun User.getUserAge(age:Int): String {
+    return "Age : "+ age
   }
 
   // Defining a function in kotlin
