@@ -2,32 +2,33 @@ package github.nisrulz.sample.learnkotlin
 
 /* Converted the Java file to kotlin
 
- Constructor in Kotlin is defined as:
+ 1.Constructor in Kotlin is defined as:
 
-   class User constructor(firstName: String) {
-    ..
-   }
+     class User constructor(firstName: String) {
+      ..
+     }
 
-  however if the primary constructor does not have any annotations or visibility modifiers,
-  the constructor keyword can be omitted:
+    however if the primary constructor does not have any annotations or visibility modifiers,
+    the constructor keyword can be omitted:
 
-  class User (firstName: String) {
-    ..
-   }
+    class User (firstName: String) {
+      ..
+     }
 
-   NOTE : The primary constructor cannot contain any code. Initialization code can be placed in initializer blocks, which are
-          prefixed with the init keyword:
+     NOTE : The primary constructor cannot contain any code. Initialization code can be placed in initializer blocks, which are
+            prefixed with the init keyword:
 
-          class User(firstName: String) {
-            init {
-                logger.info("User initialized with value ${firstName}")
+            class User(firstName: String) {
+              init {
+                  logger.info("User initialized with value ${firstName}")
+                }
               }
-            }
 
-
-
+  2. Inheritance
+     In Kotlin, all classes extend from Any, which is similar to Object in Java. By default, classes are closed,
+     like final classes in Java. So, in order to extend a class, it has to be declared as open or abstract
 */
-class User(var fName: String, var lName: String) {
+open class User(var fName: String, var lName: String) {
   /*
    When defining variables in Kotlin, there are two options:
     1. Mutable variables, defined by var keyword.

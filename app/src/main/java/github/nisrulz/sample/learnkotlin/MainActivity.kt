@@ -37,8 +37,12 @@ class MainActivity : AppCompatActivity() {
     // userName.firstName = "Nishant"
     // userName.lastName = "Srivastava"
 
+    // Create the operator class instance and display it in the activity
+    var operator = Operator("John","Doe")
+    txt_helloworld.text="Hello "+operator.fullName
+
     // Set the value in textview using the custom getter
-    txt_helloworld.text = "Hello Kotlin World! - "+userName.fullName
+    // txt_helloworld.text = "Hello Kotlin World! - "+userName.fullName
 
 
 
