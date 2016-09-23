@@ -48,6 +48,7 @@ open class User(var fName: String, var lName: String) {
   val fullName: String? get() = firstName + " " + lastName
 
   // Defining a member function in kotlin
+  // More info at https://kotlinlang.org/docs/reference/functions.html
   fun sayHello(name: String): String {
     return "Hello " + name
   }

@@ -4,6 +4,7 @@ package github.nisrulz.sample.learnkotlin
 // This is IMPORTANT to get reference of all views under the exact layout
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -57,6 +58,28 @@ class MainActivity : AppCompatActivity() {
     // Set the value in textview
     txt_helloworld.text = stringToDisplay
 
+
+    /* Using lambdas
+       1. if parameters aren’t used, we can leave them out
+
+          btn_toast.setOnClickListener({ toast("Click") })
+
+       2. if the function is the last parameter, it can be moved out of the parentheses
+
+          btn_toast.setOnClickListener() { toast("Click") }
+
+       3. if the function has only one parameter that is a function, parentheses can be left out
+
+          btn_toast.setOnClickListener { toast("Click") }
+
+       More info : https://kotlinlang.org/docs/reference/lambdas.html
+     */
+    btn_toast.setOnClickListener({ view -> toast("Click") })
+
+  }
+
+  private fun toast(s: String) {
+    Toast.makeText(this,s,Toast.LENGTH_SHORT).show()
   }
 
   // Defining a function in kotlin
