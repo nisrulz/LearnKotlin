@@ -29,9 +29,13 @@ class MainActivity : AppCompatActivity() {
 
     // Using the kotlin pojo class
     // More info about properties at https://kotlinlang.org/docs/reference/properties.html
-    val userName = User()
-    userName.firstName = "Nishant"
-    userName.lastName = "Srivastava"
+
+    // Initializing using the primary constructor
+    val userName = User("Nishant", "Srivastava")
+
+    // Initialize using default setter
+    // userName.firstName = "Nishant"
+    // userName.lastName = "Srivastava"
 
     // Set the value in textview using the custom getter
     txt_helloworld.text = "Hello Kotlin World! - "+userName.fullName
