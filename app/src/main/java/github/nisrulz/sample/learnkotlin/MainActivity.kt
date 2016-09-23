@@ -23,6 +23,11 @@ class MainActivity : AppCompatActivity() {
     // Explicitly throw a NullPointerException
     number!!.toString()
 
+
+    // Casting in done by using an 'as' keyword, here also using the Safe” cast operator '?' which
+    // returns the null value instead of throwing an exception
+    val x: String? = number as? String
+
     /* Static Layout Import
      Kotlin allows you to import all references to views from the layout with one import.
 
