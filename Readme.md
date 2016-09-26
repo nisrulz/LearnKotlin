@@ -1,5 +1,9 @@
 ![Image](https://github.com/nisrulz/LearnKotlin/blob/master/img/github_banner.png)
 
+#### Tutorials
+
++ [Kotlin Cheatsheet](https://learnxinyminutes.com/docs/kotlin/)
+
 
 License
 =======
