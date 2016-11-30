@@ -28,7 +28,7 @@ package github.nisrulz.sample.learnkotlin
      In Kotlin, all classes extend from Any, which is similar to Object in Java. By default, classes are closed,
      like final classes in Java. So, in order to extend a class, it has to be declared as open or abstract
 */
-open class User(var fName: String, var lName: String) {
+open class User(fName: String, lName: String) {
   /*
    When defining variables in Kotlin, there are two options:
     1. Mutable variables, defined by var keyword.

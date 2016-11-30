@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     // This will be executed only if the number is not null
     number?.toString()
     // Explicitly throw a NullPointerException
-    number!!.toString()
+    //  number!!.toString()
 
 
     // Casting in done by using an 'as' keyword, here also using the Safe” cast operator '?' which
@@ -100,8 +100,8 @@ class MainActivity : AppCompatActivity() {
 
   // Defining a kotlin extension
   // Extension functions don’t modify the original extended class, but are a convenient way of writing utility methods.
-  fun User.getUserAge(age:Int): String {
-    return "Age : "+ age
+  fun User.getUserAge(age: Int): String {
+    return "Age : " + age
   }
 
   // Defining a function in kotlin
