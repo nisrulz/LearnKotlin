@@ -16,12 +16,22 @@ class MainActivity : AppCompatActivity() {
 
     var stringToDisplay = "Hello Kotlin World!"
 
+    /* Raw string is delimited by using triple quote (""")
+     * Raw strings can contain newlines and any other characters.
+     */
+    var rawStringToDisplay = """
+        fun helloWorld(val name : String) {
+          println("Hello, world!")
+        }
+       """
+
     //The null check can be simplified using safe call operator (?.)
     val number: Int? = null
     // This will be executed only if the number is not null
     number?.toString()
+
     // Explicitly throw a NullPointerException
-    //  number!!.toString()
+    // number!!.toString()
 
 
     // Casting in done by using an 'as' keyword, here also using the Safe” cast operator '?' which
@@ -49,26 +59,28 @@ class MainActivity : AppCompatActivity() {
     val userName = User("Nishant", "Srivastava")
 
     // Using contructor to initialize the User object and get value using the custom getter
-    stringToDisplay = stringToDisplay + "\n\nUsing primary constructor\n" + "Hello " + userName.fullName
+    stringToDisplay += "\n\nUsing primary constructor\n" + "Hello " + userName.fullName
 
     // Initialize using default setter
     userName.firstName = "Harsh"
     userName.lastName = "Singh"
 
-    stringToDisplay = stringToDisplay + "\n\nUsing default setter\n" + "Hello " + userName.fullName
+    stringToDisplay += "\n\nUsing default setter\n" + "Hello " + userName.fullName
 
     // Create the operator class instance and display it in the activity
     var operator = Operator("John", "Doe")
-    stringToDisplay = stringToDisplay + "\n\nUsing inheritance\n" + "Hello " + operator.fullName
+    stringToDisplay += "\n\nUsing inheritance\n" + "Hello " + operator.fullName
 
     // Using member function
-    stringToDisplay = stringToDisplay + "\n\nUsing member function of User object\n" + userName.sayHello(
+    stringToDisplay += "\n\nUsing member function of User object\n" + userName.sayHello(
         "Nishant")
 
-    stringToDisplay = stringToDisplay + "\n\nUsing local member function\n" + add(5, 10)
+    stringToDisplay += "\n\nUsing local member function\n" + add(5, 10)
 
     // Using a defined kotlin extension
-    stringToDisplay = stringToDisplay + "\n\nUsing kotlin extensions\n" + userName.getUserAge(22)
+    stringToDisplay += "\n\nUsing kotlin extensions\n" + userName.getUserAge(22)
+
+    stringToDisplay += "\n\nUsing raw string\n" + rawStringToDisplay
 
 
     // Set the value in textview
