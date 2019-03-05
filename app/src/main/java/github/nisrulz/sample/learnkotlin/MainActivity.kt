@@ -3,7 +3,7 @@ package github.nisrulz.sample.learnkotlin
 // Get the references for all the views in the layout with a defined ID, via below import.
 // This is IMPORTANT to get reference of all views under the exact layout
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
